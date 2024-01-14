@@ -56,28 +56,30 @@ pi_pwm_r_back.start(0)
 #         pulse_send = time.time()
 #     while GPIO.input(ultra_echo)==1:
 #         pulse_recieved = time.time()
-#         if(pulse_recieved-pulse_send >= 0.1): # if no obstable for too long just skip waiting
+#         if(pulse_recieved-pulse_send >= 0.5): # if no obstable for too long just skip waiting
 #             print('no ref')
 #             break
 #     print('calc')
 #     pulse_duration = pulse_recieved - pulse_send
-#     pulse_duration = round(pulse_duration/2,0)
-#     distance = 340*pulse_duration
-#     print(distance)
+#     pulse_duration = round(pulse_duration/2,2)
+#     distance = 34000*pulse_duration
+#     print('Distance:', distance)
 #     #determine when to stop/slowdown
 #     print ('determine')
-#     if (distance<=10):
+#     if (distance<=15):
 #         print('stop')
 #         pi_pwm_l.ChangeDutyCycle(0)
 #         pi_pwm_l_back.ChangeDutyCycle(0)
 #         pi_pwm_r.ChangeDutyCycle(0)
 #         pi_pwm_r_back.ChangeDutyCycle(0)
-#     elif(distance<=20):
-#         print('slow down')
-#         pi_pwm_l.ChangeDutyCycle(30)
-#         pi_pwm_r.ChangeDutyCycle(30)
+#     # elif(distance<=20):
+#     #     print('slow down')
+#     #     pi_pwm_l.ChangeDutyCycle(30)
+#     #     pi_pwm_r.ChangeDutyCycle(30)
 #     else:
-        #move
-print('move')
+#         #move
+#         print('move')
 forward()
+time.sleep(2)
+backward()
 time.sleep(2)
