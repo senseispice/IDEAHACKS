@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import time
-
+# import functions for the screen
 pwm_r_back = 12
 pwm_l_back = 35
 pwm_r = 32
@@ -10,7 +10,10 @@ ultra_echo = 5
 pulse_send = 0
 pulse_recieved = 0
 distance = 0
-
+gif_path = ""
+def face(string emotion){
+    
+}
 #backward code
 def backward():
     pi_pwm_l.ChangeDutyCycle(80)
