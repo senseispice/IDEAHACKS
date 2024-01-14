@@ -11,9 +11,7 @@ pulse_send = 0
 pulse_recieved = 0
 distance = 0
 gif_path = ""
-def face(string emotion){
-    
-}
+
 #backward code
 def backward():
     pi_pwm_l.ChangeDutyCycle(80)

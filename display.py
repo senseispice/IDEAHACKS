@@ -17,6 +17,7 @@ spi = busio.SPI(clock=SCK, MOSI=MOSI, MISO=MISO)
 display = ili9341.ILI9341(spi, cs=digitalio.DigitalInOut(CS_PIN),
                           dc=digitalio.DigitalInOut(DC_PIN))
 
+
 #Main loop:
 while True:
     # Clear the display
