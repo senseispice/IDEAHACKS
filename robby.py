@@ -78,6 +78,6 @@ pi_pwm_r_back.start(0)
 #         pi_pwm_r.ChangeDutyCycle(30)
 #     else:
         #move
-    print('move')
-    forward()
-    time.sleep(2)
+print('move')
+forward()
+time.sleep(2)
